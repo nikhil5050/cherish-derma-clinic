@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const products = require("./data/Products");
 dotenv.config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const cors = require("cors")
 const mongoose = require("mongoose");
 
@@ -49,7 +49,7 @@ app.use("/api/config/paypal", (req, res) => {
 
 
 
-app.listen(PORT , () => {
+app.listen(PORT || 9000 , () => {
   console.log(`server listening on port ${PORT}`);
 });
 
